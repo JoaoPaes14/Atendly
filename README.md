@@ -32,7 +32,7 @@ A parte frontend da aplicação foi desenvolvida com Vue.js. O aplicativo oferec
    Isso irá compilar e iniciar o servidor, e você poderá acessar a aplicação em `http://localhost:8080`.
 
 3. **Compilar para produção:**
-   Quando estiver pronto para gerar uma versão otimizada para produção, execute:
+   Quando estiver pronto para gerar uma versão otimizada para produção, execute: 
 
    ```bash
    npm run build
