@@ -76,6 +76,5 @@ A estrutura do projeto é dividida entre o frontend e o backend. O frontend est�
 ## Funcionalidade
 
 - **Login:** O usuário pode fazer login enviando seu e-mail e senha. Se as credenciais forem corretas, um token JWT é gerado e enviado ao frontend.
-- **Cadastro:** O usuário pode se registrar com um e-mail e senha (esta funcionalidade pode ser adicionada conforme o backend for expandido).
-
+- **Cadastro:** O usuário pode se registrar com um e-mail e senha 
 
