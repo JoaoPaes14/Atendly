@@ -1,0 +1,31 @@
+# Ignorar arquivos do sistema operacional (ex: macOS)
+.DS_Store
+
+# Ignorar a pasta node_modules (dependências do projeto)
+node_modules/
+
+# Ignorar pasta de build (dist)
+dist/
+
+# Ignorar arquivos de configuração de ambiente local
+.env.local
+.env.*.local
+
+# Ignorar arquivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Ignorar diretórios e arquivos de editores (IDE)
+.idea/
+.vscode/
+
+# Ignorar arquivos do Visual Studio (arquivos do projeto)
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Ignorar arquivos temporários de editores
+*.swp
