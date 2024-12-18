@@ -55,7 +55,7 @@ O backend foi desenvolvido com Node.js e Express. Ele fornece uma API para auten
    Após a instalação das dependências, execute o seguinte comando para iniciar o servidor:
 
    ```bash
-   node dist/app.js
+   npm start
    ```
 
    Isso iniciará o servidor do backend, e ele ficará escutando por requisições na porta configurada, normalmente `http://localhost:5000`.
