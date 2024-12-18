@@ -59,7 +59,6 @@ export default {
     };
   },
   methods: {
-    
     // API login
     async handleLogin() {
       try {
@@ -89,31 +88,34 @@ export default {
 
 <style scoped>
 /* Estilo do container principal */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f6fc;
+  height: 100%;
+}
+
 .container {
-  background-color: #f2f6fc; 
+  height: 100vh; /* Garante altura total da viewport */
 }
 
 /* Estilo do Card */
 .login-card {
   display: flex;
-  width: 750px;
-  height: 400px;
+  flex-wrap: wrap; /* Permite que se ajuste em telas menores */
+  width: 100%;
+  max-width: 750px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-  .login-card {
-    width: 100%; 
-    height: auto; 
-  }
-}
-
-/* Estilo do formulário */
+/* Formulário de Login */
 .login-form {
   flex: 1;
   background-color: #ffffff;
+  padding: 30px;
+  box-sizing: border-box;
 }
 
 .login-form h3 {
@@ -130,7 +132,7 @@ export default {
 .btn-login {
   background-color: #4cae4f;
   border: none;
-  font-size: 0.8rem; 
+  font-size: 1rem;
   padding: 10px 28px;
   border-radius: 5px;
 }
@@ -139,39 +141,70 @@ export default {
   background-color: #3b8c3c;
 }
 
-/* Mensagem de boas-vindas */
+/* Seção de boas-vindas */
 .login-welcome {
   flex: 1;
   background: linear-gradient(to bottom, #2c3e50, #4cae4f);
   text-align: center;
+  color: white;
+  padding: 40px;
+  box-sizing: border-box;
 }
 
-.text-white {
-  color: #fff;
+.login-welcome h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
-/* Botão Inscrever-se */
+.login-welcome p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
 .btn-light {
   color: #4cae4f;
-  border: 1px solid #fff;
+  background-color: white;
+  border: none;
   padding: 10px 28px;
-  font-size: 0.8rem;
   border-radius: 5px;
-  margin-top: 50px; 
+  font-size: 1rem;
 }
 
 .btn-light:hover {
-  background-color: #fff;
-  color: #2c3e50;
+  background-color: #4cae4f;
+  color: white;
+  transition: all 0.3s;
 }
 
-/* Responsividade*/
+/* Responsividade */
 @media (max-width: 768px) {
-  .login-form .form-control,
+  .login-card {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .login-welcome {
+    padding: 20px;
+  }
+
   .btn-login,
   .btn-light {
-    font-size: 1rem; 
-    padding: 12px; 
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form h3 {
+    font-size: 1.5rem;
+  }
+
+  .login-welcome h3 {
+    font-size: 1.4rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
   }
 }
 </style>

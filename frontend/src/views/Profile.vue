@@ -1,9 +1,12 @@
 <template>
   <div class="profile container d-flex justify-content-center align-items-center vh-100">
-    <div class="profile-card d-flex">
+    <div class="profile-card">
       <!-- Esquerda: Dados do Perfil -->
       <div class="profile-info p-4">
         <h3 class="mb-4 text-center">Perfil</h3>
+        <div class="profile-image mb-4 text-center">
+          <img src="@/assets/volunteer_avatar.png" alt="Imagem do Perfil" class="img-fluid rounded-circle" />
+        </div>
         <div v-if="user">
           <div class="profile-item">
             <p><strong>Nome:</strong> {{ user.name }}</p>
@@ -57,33 +60,34 @@ export default {
 </script>
 
 <style scoped>
-/* Estilo do container principal */
+/* Fundo do container principal */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f6fc;
+  height: 100%;
+}
+
 .container {
-  background-color: #f2f6fc; 
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 /* Estilo do Card */
 .profile-card {
   display: flex;
   flex-wrap: wrap; 
-  width: 750px;
-  height: 400px;
+  width: 100%;
+  max-width: 750px; /* Limita largura máxima */
+  height: auto;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-  /* Responsividade para telas menores */
-  .profile-card {
-    width: 100%; 
-    height: auto; 
-    flex-direction: column; 
-  }
-}
-
-/* Estilo das informações do perfil */
+/* Dados do perfil */
 .profile-info {
   flex: 1;
   padding: 30px;
@@ -105,14 +109,28 @@ export default {
   margin: 10px 0;
 }
 
+.profile-info p strong {
+  font-weight: bold;
+  color: #4cae4f;
+}
+
+/* Imagem do perfil */
+.profile-image img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #4cae4f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Mensagem de boas-vindas */
 .profile-welcome {
-  flex: 1;
+  flex: 1; /* Ocupa todo o espaço disponível */
   background: linear-gradient(to bottom, #2c3e50, #4cae4f);
   text-align: center;
   padding: 40px;
   color: #fff;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .profile-welcome h3 {
@@ -123,10 +141,6 @@ export default {
 .profile-welcome p {
   font-size: 1.1rem;
   font-weight: 500;
-}
-
-.text-white {
-  color: #fff;
 }
 
 /* Botão Sair */
@@ -145,31 +159,29 @@ export default {
   color: white;
 }
 
-/* Estilo de borda e sombra */
-.profile-info p strong {
-  font-weight: bold;
-  color: #4cae4f;
-}
-
-/* Responsividade para telas muito pequenas (mobile) */
-@media (max-width: 480px) {
+/* Responsividade */
+@media (max-width: 768px) {
   .profile-card {
-    width: 100%;
-    height: auto;
-    flex-direction: column; 
+    flex-direction: column; /* Coluna em telas menores */
   }
 
+  .profile-image img {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
   .profile-info h3 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
   .profile-info p {
-    font-size: 1rem; 
+    font-size: 1rem;
   }
 
   .btn-light {
-    padding: 12px 20px; 
-    font-size: 0.9rem; 
+    padding: 12px 20px;
+    font-size: 0.9rem;
   }
 }
 </style>
