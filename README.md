@@ -77,4 +77,5 @@ A estrutura do projeto é dividida entre o frontend e o backend. O frontend est�
 
 - **Login:** O usuário pode fazer login enviando seu e-mail e senha. Se as credenciais forem corretas, um token JWT é gerado e enviado ao frontend.
 - **Cadastro:** O usuário pode se registrar com um e-mail e senha 
+- **Perfil:** O perfil permite que os usuários visualizem as informações do seu perfil após o login. Ele exibe o nome e e-mail do usuário, além de permitir que ele saia da aplicação.
 
