@@ -80,7 +80,7 @@ body, html {
   display: flex;
   flex-wrap: wrap; 
   width: 100%;
-  max-width: 750px; /* Limita largura máxima */
+  max-width: 750px; 
   height: auto;
   border-radius: 10px;
   overflow: hidden;
@@ -162,7 +162,7 @@ body, html {
 /* Responsividade */
 @media (max-width: 768px) {
   .profile-card {
-    flex-direction: column; /* Coluna em telas menores */
+    flex-direction: column; 
   }
 
   .profile-image img {

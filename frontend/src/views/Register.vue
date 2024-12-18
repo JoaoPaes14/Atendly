@@ -107,7 +107,7 @@ body, html {
 /* Card Principal */
 .register-card {
   display: flex;
-  flex-wrap: wrap; /* Permite ajuste em telas menores */
+  flex-wrap: wrap; 
   width: 100%;
   max-width: 750px;
   border-radius: 10px;
@@ -184,7 +184,7 @@ body, html {
 /* Responsividade */
 @media (max-width: 768px) {
   .register-card {
-    flex-direction: column; /* Alinha verticalmente em telas pequenas */
+    flex-direction: column; 
     max-width: 100%;
   }
 

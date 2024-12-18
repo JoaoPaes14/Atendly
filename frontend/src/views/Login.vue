@@ -70,11 +70,10 @@ export default {
         // Salvar o token no localStorage
         localStorage.setItem("token", response.data.token);
 
-        // Caso o login seja bem-sucedido
+        
         alert("Login realizado com sucesso!");
         console.log(response.data);
 
-        // Redirecionar para a tela de perfil
         this.$router.push("/profile");
       } catch (error) {
         // Tratamento de erro
@@ -96,13 +95,13 @@ body, html {
 }
 
 .container {
-  height: 100vh; /* Garante altura total da viewport */
+  height: 100vh; 
 }
 
 /* Estilo do Card */
 .login-card {
   display: flex;
-  flex-wrap: wrap; /* Permite que se ajuste em telas menores */
+  flex-wrap: wrap; 
   width: 100%;
   max-width: 750px;
   border-radius: 10px;
