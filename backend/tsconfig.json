@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,         // Necessário para importações padrão
+    "allowSyntheticDefaultImports": true, // Facilita compatibilidade de módulos
+    "outDir": "./dist",              // Saída da compilação
+    "resolveJsonModule": true,       // Permite importação de JSON
+    "typeRoots": ["./node_modules/@types"], // Diretório de tipos
+    "baseUrl": "./",                 // Base para importações
+    "skipLibCheck": true             // Ignora erros internos de tipos
+  },
+  "include": ["./**/*.ts"],          // Inclui todos os arquivos TypeScript
+  "exclude": ["node_modules"]        // Exclui dependências
+}
