@@ -56,7 +56,7 @@ export const profile = async (req: Request, res: Response): Promise<void> => {
       return;
     }
     res.json(user);
-  } catch (error) {
+  }  catch (error) {
     res.status(500).json({ message: 'Erro ao buscar perfil' });
   }
 };

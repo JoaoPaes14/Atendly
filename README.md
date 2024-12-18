@@ -16,7 +16,7 @@ A parte frontend da aplicação foi desenvolvida com Vue.js. O aplicativo oferec
 ### Comandos para o Frontend
 
 1. **Instalar dependências:**
-   Para instalar as dependências necessárias para o frontend, execute:
+   Para instalar  as dependências necessárias para o frontend, execute:
 
    ```bash
    npm install
