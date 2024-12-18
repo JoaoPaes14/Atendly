@@ -125,7 +125,7 @@ body, html {
 
 /* Mensagem de boas-vindas */
 .profile-welcome {
-  flex: 1; /* Ocupa todo o espaço disponível */
+  flex: 1; 
   background: linear-gradient(to bottom, #2c3e50, #4cae4f);
   text-align: center;
   padding: 40px;
