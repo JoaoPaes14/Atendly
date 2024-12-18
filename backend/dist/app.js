@@ -42,21 +42,17 @@ const cors_1 = __importDefault(require("cors"));
 const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
 const db_1 = require("./config/db");
 dotenv.config();
+// Cmd para rodar o backend node dist/app.js
 const app = (0, express_1.default)();
-// Configuração de CORS
 app.use((0, cors_1.default)({
-    origin: 'http://localhost:8081', // Permite requisições do frontend
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permite esses métodos
-    allowedHeaders: ['Content-Type', 'Authorization'], // Permite esses cabeçalhos
+    origin: 'http://localhost:8081',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }));
-// Middleware para parsing de JSON
 app.use(express_1.default.json());
-// Roteamento
 app.use('/api/users', userRoutes_1.default);
-// Sincronização do Sequelize com o banco de dados
 db_1.sequelize.sync()
     .then(() => {
-    // Porta do servidor definida por variável de ambiente ou padrão 5000
     const port = process.env.PORT || 5000;
     app.listen(port, () => {
         console.log(`Servidor rodando na porta ${port}`);
@@ -65,4 +61,3 @@ db_1.sequelize.sync()
     .catch((error) => {
     console.error('Erro ao sincronizar o banco de dados:', error);
 });
-// Middleware para tratamento de erros
